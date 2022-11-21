@@ -1,0 +1,55 @@
+Searching 237 files for "Defensive"
+
+/home/acso/GIT/master/AllSetPlay:
+    <binary>
+
+/home/acso/GIT/master/setPlayGUI/spinitdialog.cpp:
+   62      specialAreas.clear();
+   63  
+   64:     if(!ui->offensiveTypeRB->isChecked() && !ui->defensiveTypeRB->isChecked())
+   65      {
+   66          QMessageBox::warning(this, "No type selected",
+   67:                              "Choose if the setplay is on offensive or defensive situation.");
+   68      }
+   69      else if(ui->situationComboBox->currentIndex() == 0)
+
+/home/acso/GIT/master/setPlayGUI/spinitdialog.ui:
+   90       </item>
+   91       <item>
+   92:       <widget class="QRadioButton" name="defensiveTypeRB">
+   93         <property name="enabled">
+   94          <bool>false</bool>
+   ..
+  107         </property>
+  108         <property name="text">
+  109:         <string>Defensive</string>
+  110         </property>
+  111        </widget>
+
+/home/acso/GIT/master/ui_spinitdialog.h:
+   36      QSpacerItem *horizontalSpacer;
+   37      QRadioButton *offensiveTypeRB;
+   38:     QRadioButton *defensiveTypeRB;
+   39      QSpacerItem *horizontalSpacer_2;
+   40      QHBoxLayout *horizontalLayout_3;
+   ..
+  123          horizontalLayout_2->addWidget(offensiveTypeRB);
+  124  
+  125:         defensiveTypeRB = new QRadioButton(SpInitDialog);
+  126:         defensiveTypeRB->setObjectName(QString::fromUtf8("defensiveTypeRB"));
+  127:         defensiveTypeRB->setEnabled(false);
+  128:         sizePolicy1.setHeightForWidth(defensiveTypeRB->sizePolicy().hasHeightForWidth());
+  129:         defensiveTypeRB->setSizePolicy(sizePolicy1);
+  130:         defensiveTypeRB->setMinimumSize(QSize(98, 22));
+  131  
+  132:         horizontalLayout_2->addWidget(defensiveTypeRB);
+  133  
+  134          horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+  ...
+  369          label->setText(QApplication::translate("SpInitDialog", "Type", 0, QApplication::UnicodeUTF8));
+  370          offensiveTypeRB->setText(QApplication::translate("SpInitDialog", "Offensive", 0, QApplication::UnicodeUTF8));
+  371:         defensiveTypeRB->setText(QApplication::translate("SpInitDialog", "Defensive", 0, QApplication::UnicodeUTF8));
+  372          label_2->setText(QApplication::translate("SpInitDialog", "Situation", 0, QApplication::UnicodeUTF8));
+  373          positionGroupBox->setTitle(QApplication::translate("SpInitDialog", "Position", 0, QApplication::UnicodeUTF8));
+
+18 matches across 4 files
