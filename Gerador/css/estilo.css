@@ -1,0 +1,170 @@
+.fancy {
+  
+  margin: 0.5% auto;
+  padding: 10px;
+   
+  
+}
+
+.tdcolor {
+  
+background-color:#E6E5E4;
+font-size: 13px;
+}
+
+.mar {
+  margin-bottom:0px;
+  border-color: #F8F6F6; 
+}
+
+.fancyCode {
+  float:left;
+  
+  
+  width: 25%;  
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  
+}
+
+.fancyForm {
+  float:left;
+  
+  
+  width: 55%;  
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  
+}
+.fancyFormRight {
+  float:left;
+  
+  
+  width: 45%;  
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  
+}
+
+.fancyFormRight2 {
+  
+  margin: 0.5% auto;
+  padding: 0px;
+  width: 50%;  
+  float:left;
+  
+}
+
+.fancy5 {
+  position:relative;
+  margin: 20px auto;
+  margin-top:20px;
+  width: 720px;
+  border: solid #E6E6E6;
+}
+
+.fancy6 {
+  position:relative;
+  margin: 20px auto;
+  margin-top:20px;
+  width: 700px;
+  border: solid #E6E6E6;
+}
+
+.fancy2 {
+  float:left;
+  margin: 20px auto;
+  margin-top:0;
+  width: 700px;
+  border: solid #E6E6E6;
+}
+
+.block {
+  float:left;
+  
+  margin-top:0;
+  width: 700px;
+}
+
+.margem {
+  position:relative;
+  margin-bottom:5px;;
+  margin-left: 5px;;
+  margin-top:5px;
+  width: 700px;
+}
+
+.margem2 {
+  position:relative;
+  margin-bottom:20px;;
+  margin-left: 10px;;
+  margin-top:20px;
+  width: 700px;
+}
+
+.metodo {
+  position:relative;
+  margin-top:2px;
+  width: 700px;
+}
+
+.fancy3 {
+  width: 670px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  border-width: 10px;
+}
+
+.bottom {
+	position:absolute;
+	bottom:0;
+	right:0;
+	padding-right: 10px;
+  	padding-bottom: 10px;
+	}
+
+.bottom2 {
+  	padding-bottom: 30px;
+	}
+
+.topleft {
+	position:absolute;
+	top:0;
+	right:0;
+	}
+
+ select option[disabled] {
+  /* Oculta os options que estão desabilitados */
+    display: none;
+}
+
+.esp1_1 {
+  display:none;
+}
+.esp1_2 {
+  display:none;
+}
+.esp1_3 {
+  display:none;
+}
+.esp1_4 {
+  display:none;
+}
+.esp2_1 {
+  display:none;
+}
+.esp2_2 {
+  display:none;
+}
+.esp2_3 {
+  display:none;
+}
+.esp2_4 {
+  display:none;
+}

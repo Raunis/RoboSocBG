@@ -1,0 +1,82 @@
+
+## The log file stores the location of the lines of code generated to create the new behavior.
+## The log records the tags that were modified to create the new behavior. The tags are used to locate the codes inserted in each of the modified files in SPlanner and FSF.
+## Each registered tag can be searched in the file (cntrl + f), to find the places where parts of the code of the new behavior were inserted.
+
+    > Changes made to create the behavior moveT:
+
+
+File name:        ClangAction.h
+Located in:             splanner\libs\libsetplay\setplay
+	- tag: @@_newAction_gerador
+	- tag: @@_newAction_executor
+	- tag: @@_newAction_class
+Total lines inserted in this file:53
+
+File name:     ClangAction.cc
+Located in:         splanner\libs\libsetplay\setplay
+	- tag: @@_newAction_geradorParse
+	- tag: @@_newAction_class
+Total lines inserted in this file:69
+
+File name:     spaction.cpp
+Located in:         splanner\setPlayGUI
+	- tag: @@_newAction_print
+	- tag: @@_newAction_getName
+	- tag: @@_newAction_case
+	- tag: @@_newAction_genericDraw
+Total lines inserted in this file:20
+
+File name:     spaction.h
+Located in:         splanner\setPlayGUI
+	- tag: @@_newAction_type
+	- tag: @@_newAction_draw
+Total lines inserted in this file:3
+
+File name:     spfcportugalporting.cpp
+Located in:         splanner\setPlayGUI\portingclasses
+	- tag: @@_newAction1
+	- tag: @@_newAction2
+Total lines inserted in this file:15
+
+File name:     spplayer.cpp
+Located in:         splanner\setPlayGUI
+	- tag: @@_newAction_movePosition
+	- tag: @@_newAction_Menu
+	- tag: @@_newAction_Specific_NoBall
+	- tag: @@_newAction_noBall
+	- tag: @@_newAction_ghost
+	- tag: @@_newAction_genericDraw
+Total lines inserted in this file:10
+
+File name:     SetplayAction.h
+Located in:         bahiart\bahia\strategy\setplays
+	- tag: @@_newAction
+Total lines inserted in this file:0
+
+File name:     SetplayAction.cpp
+Located in:         bahiart\bahia\strategy\setplays
+	- tag: @@_newAction
+Total lines inserted in this file:0
+
+File name:     BehavemoveT.cpp
+Located in:         bahiart\strategy
+	- tag: @@_newAction_bib
+Total lines inserted in this file:0
+
+File name:      BehavemoveT.h
+Located in:         bahiart\strategy
+	- tag: @@_newAction_bib
+Total lines inserted in this file:0
+
+File name:     spfield.cpp
+Located in:         splanner\setPlayGUI
+Total lines inserted in this file:0
+
+File name:     spfield.h
+Located in:         splanner\setPlayGUI
+Total lines inserted in this file:0
+
+
+
+Total lines inserted in all files: 170.

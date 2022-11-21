@@ -1,0 +1,91 @@
+
+##  O arquivo de log armazena a localização das linhas de código geradas para criar o novo comportamento.
+##  O log registra tags nos arquivos que foram alterados para criar o novo comportamento. As tags servem para localizar os códigos inseridos em cada um desses arquivos. 
+##  Cada tag registrada pode ser buscada no arquivo (cntrl + f), para encontrar os locais onde partes do codigo do novo comportamento foi inserido.
+
+   > Alterações feitas para criar o comportamento passRegion:
+
+
+Nome do arquivo:        ClangAction.h
+Localizado em:             splanner\libs\libsetplay\setplay
+	- tag: @@_newAction_gerador
+	- tag: @@_newAction_executor
+	- tag: @@_newAction_class
+Total de linhas inseridas neste arquivo:58
+
+Nome do arquivo:     ClangAction.cc
+Localizado em:         splanner\libs\libsetplay\setplay
+	- tag: @@_newAction_geradorParse
+	- tag: @@_newAction_class
+Total de linhas inseridas neste arquivo:143
+
+Nome do arquivo:     spaction.cpp
+Localizado em:         splanner\setPlayGUI
+	- tag: @@_newAction_print
+	- tag: @@_newAction_getName
+	- tag: @@_newAction_Passe
+	- tag: @@_newAction_case
+	- tag: @@_newAction_genericDraw
+Total de linhas inseridas neste arquivo:22
+
+Nome do arquivo:     spaction.h
+Localizado em:         splanner\setPlayGUI
+	- tag: @@_newAction_type
+	- tag: @@_newAction_draw
+Total de linhas inseridas neste arquivo:3
+
+Nome do arquivo:     spfcportugalporting.cpp
+Localizado em:         splanner\setPlayGUI\portingclasses
+	- tag: @@_newAction1
+	- tag: @@_newAction2
+Total de linhas inseridas neste arquivo:15
+
+Nome do arquivo:     spplayer.cpp
+Localizado em:         splanner\setPlayGUI
+	- tag: @@_newAction_comPasse
+	- tag: @@_newAction_keepPosition
+	- tag: @@_newAction_Dialog
+	- tag: @@_newAction_passRegion_menu
+	- tag: @@_newAction_insertMenu_passRegion
+	- tag: @@_newAction_passRegion_genericDraw
+Total de linhas inseridas neste arquivo:22
+
+Nome do arquivo:     SetplayAction.h
+Localizado em:         bahiart\bahia\strategy\setplays
+	- tag: @@_newAction
+Total de linhas inseridas neste arquivo:1
+
+Nome do arquivo:     SetplayAction.cpp
+Localizado em:         bahiart\bahia\strategy\setplays
+	- tag: @@_newAction
+Total de linhas inseridas neste arquivo:4
+
+Nome do arquivo:     BehavepassRegion.cpp
+Localizado em:         bahiart\strategy
+	- tag: @@_newAction_bib
+Total de linhas inseridas neste arquivo:4
+
+Nome do arquivo:     BehavepassRegion.h
+Localizado em:         bahiart\strategy
+	- tag: @@_newAction_bib
+Total de linhas inseridas neste arquivo:0
+
+Nome do arquivo:     spfield.cpp
+Localizado em:         splanner\setPlayGUI
+	- tag: @@_newAction_PassRegion_addAction
+	- tag: @@_newAction_fieldMessageCondition
+	- tag: @@_newAction_fieldMessage
+	- tag: @@_newAction_fieldLine
+	- tag: @@_newAction_field_EventCondition
+	- tag: @@_newAction_PassRegion_fieldEvent
+Total de linhas inseridas neste arquivo:22
+
+Nome do arquivo:     spfield.h
+Localizado em:         splanner\setPlayGUI
+	- tag: @@_newAction_addAction_PassRegion
+Total de linhas inseridas neste arquivo:3
+
+
+
+Total de linhas inseridas em todos os arquivos: 297.
+Total de métodos criados em todos os arquivos: 26.

@@ -1,0 +1,72 @@
+::::::::::::::::::::::::::::::Alterações (chute)
+
+_________ClangAction.h  -  fcportugalsplanner\libs\libsetplay\setplay
+	- tag: @@_newAction_gerador
+	- tag: @@_newAction_executor
+	- tag: @@_newAction_class
+Total inserido neste arquivo:58
+
+_________ClangAction.cc  -  fcportugalsplanner\libs\libsetplay\setplay 
+	- tag: @@_newAction_geradorParse
+	- tag: @@_newAction_class
+Total inserido neste arquivo:151
+
+_________spaction.cpp - fcportugalsplanner\setPlayGUI
+	- tag: @@_newAction_print
+	- tag: @@_newAction_getName
+	- tag: @@_newAction_Passe
+	- tag: @@_newAction_case
+	- tag: @@_newAction_genericDraw
+Total inserido neste arquivo:22
+
+_________spaction.h - fcportugalsplanner\setPlayGUI
+	- tag: @@_newAction_type
+	- tag: @@_newAction_draw
+Total inserido neste arquivo:3
+
+_________spfcportugalporting.cpp - fcportugalsplanner\setPlayGUI\portingclasses
+	- tag: @@_newAction1
+	- tag: @@_newAction2
+Total inserido neste arquivo:45
+
+_________spplayer.cpp - fcportugalsplanner\setPlayGUI
+	- tag: @@_newAction_comPasse
+	- tag: @@_newAction_keepPosition
+	- tag: @@_newAction_Dialog
+	- tag: @@_newAction_Menu
+	- tag: @@_newAction_Ball
+	- tag: @@_newAction_ghost
+	- tag: @@_newAction_genericDraw
+Total inserido neste arquivo:8
+
+_________SetplayAction.h - bahiart\bahia\strategy\setplays\
+	- tag: @@_newAction
+Total inserido neste arquivo:1
+
+_________SetplayAction.cpp - bahiart\bahia\strategy\setplays\
+	- tag: @@_newAction
+Total inserido neste arquivo:4
+
+_________Behavechute.cpp - bahiart\strategy
+	- tag: @@_newAction_bib
+Total inserido neste arquivo:4
+
+_________Behavechute.cpp - bahiart\strategy
+	- tag: @@_newAction_bib
+Total inserido neste arquivo:0
+
+_________spfield.cpp - fcportugalsplanner\setPlayGUI
+	- tag: @@_newAction_fieldMessageCondition
+	- tag: @@_newAction_fieldMessage
+	- tag: @@_newAction_fieldLine
+	- tag: @@_newAction_field_EventCondition
+	- tag: @@_newAction_fieldEvent
+Total inserido neste arquivo:38
+
+_________spfield.h - fcportugalsplanner\setPlayGUI
+Total inserido neste arquivo:0
+
+
+
+Total de linhas inseridas: 334.
+Total de métodos criados: 26.
