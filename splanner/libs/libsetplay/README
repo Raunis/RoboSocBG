@@ -1,0 +1,18 @@
+This package includes the code for generating the FCPortugal Setplay Framework, 
+as a static C++ library.
+
+This project wasfinantially supported by the RoboCup federation.
+
+More details on this project can be accessed through the followink links:
+- “Multi-robot Coordination using Flexible Setplays: Applications in RoboCup's
+ Simulation and Middle-Size Leagues”, L. Mota, PhD Thesis, Universidade do Porto 
+ 2012, L. P. Reis e N. Lau supervisors: http://iscte.pt/~lhrm/papers/Tese_entrega.pdf
+- “Multi-robot coordination using Setplays in the middle-size and simulation leagues”, 
+ Luís Mota, Luís Paulo Reis and Nuno Lau, Mechatronics, Vol. 21, Issue 2, March 2011, 
+ Pages 434-444, Special Issue on Advances in intelligent robot design for the Robocup 
+ Middle Size League, DOI:10.1016/j.mechatronics.2010.05.005,
+ http://www.sciencedirect.com/science/article/pii/S0957415810000851 
+- “Setplays: Achieving Coordination by the appropriate Use of arbitrary Pre-defined 
+ Flexible Plans and Inter-Robot Communication”, L. Mota and L. P. Reis, First
+ International Conference on Robot Communication and Coordination (ROBOCOMM 2007), 
+ Athens, 2007, http://iscte.pt/~lhrm/papers/robocomm2007.pdf  

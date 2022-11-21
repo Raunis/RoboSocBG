@@ -1,0 +1,178 @@
+===============================================
+Instructions for usage of the Setplay framework
+===============================================
+
+I. Instalation
+
+1. Download the code and extract it in some directory, from now on called <Setplay-containing dir>
+
+2. Compile the framework. It depends on the Boost library, which is available online on XXXXXXXXXX.
+This library shoul be available in the include path, or is expected to be in /usr/local/boost-trunk,
+e.g if it the svn version is used.
+
+3. The resulting library is available in the lib folder: libsetplay.a
+
+II. Destination project setup
+
+4. In order to include the Setplay headers for compilation, add it to the Makefile, as in
+	INC_PATH 	= (...) -I<Setplay-containing dir>
+
+5. For linking, add the library archive to the MAkefile, as in:
+	LIB_PATH	= (...) -L<Setplay-containing dir>/setplay/lib
+	LIBS		= (...) -lsetplay
+
+III. Implement the missing abstract methods of the Context class, that models concepts related to the
+State-of-the-World
+
+6. Include the Context/Cond class file in the file modeling the State-of-the-World
+	#include "setplay/cond.h"
+
+7. Make your State-of-the-World class a specialization of the Cond class, as in:
+	class WorldState: public fcportugal::setplay::Context
+
+8. Declare and implement the following abstract methods (documentation in the header file):
+	virtual bool lookup( const fcportugal::setplay::CondBallOwner& cond ) const ;
+	virtual bool lookup( const fcportugal::setplay::CondClearShotAtGoal& cond ) const ;
+	virtual bool lookup( const fcportugal::setplay::CondClearPassToPlayer& cond ) const ;
+	virtual bool lookup( const fcportugal::setplay::CondClearPassToRegion& cond ) const ;
+	virtual bool lookup( const fcportugal::setplay::CondNamed& cond ) const ;
+	virtual bool lookup( const fcportugal::setplay::CondOppGoal& cond ) const;
+	virtual bool lookup( const fcportugal::setplay::CondOurGoal& cond ) const;
+	virtual bool lookup( const fcportugal::setplay::CondGoalDiff& cond ) const;
+	virtual bool lookup( const fcportugal::setplay::CondNearOffsideLine& cond ) const;
+	virtual double time() const;
+	virtual const fcportugal::setplay::PointSimple* ballPos() const;
+	virtual const fcportugal::setplay::PointSimple* playerPos(const fcportugal::setplay::PlayerID& player) const;
+	virtual rcss::clang::PlayMode playMode() const;
+	virtual const std::string& opponentName() const; 
+	virtual unsigned int numPlayersPerTeam() const;
+	virtual const fcportugal::setplay::NameSubstitutions& nameSubstitutions() const;
+	virtual double fieldLength() const;
+	virtual double fieldWidth() const;
+
+IV. Declare and implement the action execution methods
+
+9. Include the Executor/Action class file in the file modeling actions
+	#include "setplay/clangaction.h"
+
+10. Create a new class, or make your action execution class a specialization of the 
+Action::Executor class, as in:
+	class MyExecutor: public fcportugal::setplay::Action::Executor
+
+11. Declare and implement the following abstract methods (documentation in the header file):
+	virtual void execute( const fcportugal::setplay::ActPos& a );
+    virtual void execute( const fcportugal::setplay::ActForward& a );
+    virtual void execute( const fcportugal::setplay::ActPass& a );
+    virtual void execute( const fcportugal::setplay::ActMark& a );
+    virtual void execute( const fcportugal::setplay::ActMarkLinePlayer& a );
+    virtual void execute( const fcportugal::setplay::ActMarkLineReg& a );
+    virtual void execute( const fcportugal::setplay::ActDribble& a );
+    virtual void execute( const fcportugal::setplay::ActOffsideLine& a );
+    virtual void execute( const fcportugal::setplay::ActClear& a );
+    virtual void execute( const fcportugal::setplay::ActShoot& a );
+    virtual void execute( const fcportugal::setplay::ActHold& a );
+    virtual void execute( const fcportugal::setplay::ActIntercept& a );
+    virtual void execute( const fcportugal::setplay::ActTackle& a );
+    virtual void execute( const fcportugal::setplay::ActStop& a );
+    virtual void execute( const fcportugal::setplay::ActAttentionToReg& a );
+    virtual void execute( const fcportugal::setplay::ActAttentionToObj& a );
+    virtual void execute( const fcportugal::setplay::ActMarkGoal& a );
+    virtual void execute( const fcportugal::setplay::ActReceiveBall& a );
+    virtual void execute( const fcportugal::setplay::ActMoveToOffsideLine& a);
+
+V. For the agent that will select and start setplays
+
+12. Include the SetplayManager class file:
+	#include "setplay/setplaymanager.h"
+ 
+13. Declare the usage of the corresponding namespace:
+	using namespace fcportugal::setplay;
+
+14a. If not using Case-Based reasoning for Setplay selection, create an instance of 
+SetplayManager, using the constructor with the following parameters:
+	const string teamName: name of own team;
+	string conf_file: name of file where Setplays are defined;
+	bool useComm: whether communication will be used;
+	bool limitedComm: whether communication is limited;
+	PlayerID* me: this player's id;
+	float messageRepeatTime: amount of time a message should be repeated, e.g.
+		after it has ended;
+	Context& world: reference to an instance of the class defined in steps 7&8.
+
+14b. If using Case-Based reasoning for Setplay selection, create an instance of 
+SetplayManagerWithCBR, using the constructor with the parameters in step 14a, and 
+the following ones:
+	string cbrFile: name of file where cases are recorded;
+	bool writeCBRToFileAfterExecution: whether cases are written after each
+		execution;
+	double weightThisGame: weight for cases in this game;
+	double weightThisTeam: weight for cases against this opponent;
+	double weightOtherTeams: weight for cases against other opponents;
+	double scoreIfZero: score for a Setplay with no successful executions.
+
+15a. If not using Case-Based reasoning for Setplay selection, TBD
+
+15b. If using Case-Based reasoning for Setplay selection, use the following sample code:
+	if(!setplayManager->isSetplayActive())
+		setplayManager->autoActivateSetplay(world);
+
+	if(setplayManager->isSetplayActive()){
+      		setplayManager->updateInternalState(world);
+
+		// Check again: Setplay might have ended...
+      	if(setplayManager->isSetplayActive()){
+		// Will check if there are feasible transitions to choose from...
+      		vector<const Transition*>* transitions
+			= setplayManager->possibleTransitions(world);
+
+      		// Will simply look at all the available transitions and choose the first
+      		// valid one...
+      		for(unsigned int i=0; transitions!=NULL && i != transitions->size(); i++)
+			if(transitions->at(i)!=NULL && !setplayManager->isNextStepAlreadyChosen() ){
+	  			setplayManager->chosenTransition(i,world);
+	  			break; // Ignore remaining transitions...
+			}
+    
+      		//Communicate?
+      		if(setplayManager->willCommunicate(world))
+		// communicate the message obtained through setplayManager->messageToSend(world)
+	}
+
+VI. For the agents that will execute actions (might include the agent in V)
+
+16. If not already done before, in V, if the agent also decides Setplay begin, follow
+steps 17-19. 
+
+17. Include the SetplayManager class file:
+	#include "setplay/setplaymanager.h"
+ 
+18. Declare the usage of the corresponding namespace:
+	using namespace fcportugal::setplay;
+
+19. Create an instance of SetplayManager, using the constructor with the parameters described 
+in step 14.
+
+20. Create an instance of Action::Executor, the class described in IV.
+
+21. Use the following sample code:
+	if(setplayManager->isSetplayActive())
+	    if(...)// Some message was received...
+      		//Process Setplay message
+      		setplayManager->processReceivedMessage(<setplayMessage>,
+					     *world);
+    
+	 //Must check is setplay was not ended by message...
+    	if(setplayManager->isSetplayActive()){
+    		setplayManager->updateInternalState(*world);
+    
+    
+    		if(setplayManager->playerParticipates()){
+      			//Check if there are actions to execute
+      			const fcportugal::setplay::Action* action=
+				setplayManager->currentAction(*world);
+      
+      			if(action!=NULL)
+				executor.execute(action);
+		}
+	}
+
