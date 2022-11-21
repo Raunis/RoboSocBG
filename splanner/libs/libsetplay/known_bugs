@@ -1,0 +1,5 @@
+- role and parameter names must be different, not simply by an ending number. E.g., 'player' and 'player2' will not be parsed (MAYBE SOLVED?!? I THINK SO...)
+
+- order of players in setplay header and steps must be the same. Must correct this.
+
+- deletion of currentSetplay in SetplayManager::processReceivedMessage was crashing and was therefore disabled.
