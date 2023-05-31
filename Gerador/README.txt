@@ -8,7 +8,7 @@ https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.2.9/
 
 The SPlanner project configured to be modified by generator follows the same git directory of RoboSocBG.
 We suggest that you place the splanner folder in the /home directory.
-Do not configure the path for the team if you do not have one configured to be modified by generator.
+Only configure the path for the team if you have configured the team to be modified by the generator.
 
 Make sure that the folders of SPlanner and Team are with permission to RoboSocBG modify the the files envolved in the creation of new behaviors. If unsure, please, use the commands bellow:
 sudo su
