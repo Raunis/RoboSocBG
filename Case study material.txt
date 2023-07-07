@@ -2,7 +2,7 @@ It is possible to access the material used during the case study from the links 
 Item 1 (Research on robot soccer setplay creation software) fits the survey sent to the robot soccer teams of the 3D simulation sub-league of Robocup to collect data regarding the tools to support the creation of setplays adopted by them. 
 Item 2 (Tutorial for the case study) corresponds to the presentation tutorial of the case study presented to the replication participants during the validation stage of the RoboSocBG tool. 
 After reading the tutorial, each participant completed the participant profile form (item 3).
-At the end of the study, participants answered a qualitative evaluation form (item 4 - Robosocbg tool evaluation questionnaire) to record their experience using the RoboSocBG tool.
+At the end of the case study, participants answered a qualitative evaluation form (item 4 - Robosocbg tool evaluation questionnaire) to record their experience using the RoboSocBG tool.
 
 1. Research on robot soccer setplay creation software:
 https://forms.gle/XZ4JLDK6ebcLoD5LA
